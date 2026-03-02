@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハンガリーフィールドワーク | ARパンフレット</title>
+    <style>
+        /* --- 基本スタイル (index.htmlと共通) --- */
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: #333; transition: 0.3s; }
+        a:hover { opacity: 0.7; }
+
+        /* ヘッダー */
+        header { background: #fff; padding: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-weight: bold; font-size: 1.2rem; }
+
+        /* ヒーローエリア（作品のトップ画） */
+        .project-hero {
+            background: #fff;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .project-hero h1 { font-size: 2rem; margin-bottom: 10px; }
+        .project-hero .subtitle { color: #666; font-size: 1rem; margin-bottom: 30px; display: block; }
+        
+        /* メイン画像（表紙） */
+        .main-visual {
+            max-width: 80%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* 影をつけて紙っぽく */
+            border-radius: 4px;
+            margin-bottom: 40px;
+        }
+
+        /* コンテンツエリア */
+        .content-section {
+            background: #fff;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h2 { border-left: 4px solid #007bff; padding-left: 15px; font-size: 1.5rem; margin-bottom: 20px; }
+        h3 { font-size: 1.2rem; margin-top: 30px; margin-bottom: 15px; font-weight: bold; }
+
+        /* 2カラムレイアウト（説明文 + 画像） */
+        .two-col {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .two-col img {
+            width: 100%;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        .col-text { flex: 1; }
+        .col-img { flex: 1; }
+
+        /* ボタン */
+        .btn-group { display: flex; gap: 20px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #007bff;
+            color: #fff;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+        .btn-secondary {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #333;
+            color: #fff;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+        .back-link { text-align: center; margin: 40px 0; display: block; color: #666; }
+
+        /* スマホ対応 */
+        @media (max-width: 768px) {
+            .two-col { flex-direction: column; }
+            .main-visual { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">My Portfolio</a>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <span class="subtitle">人文学部国際コミュニケーション学科 × 情報学部情報学科 共同プロジェクト</span>
+            <h1>Travel to HUNGARY</h1>
+            <p>AR（拡張現実）技術を活用した、動画が動き出す観光パンフレット</p>
+            
+            <img src="hungary-cover.jpg" alt="パンフレット表紙" class="main-visual">
+
+            <div class="btn-group">
+                <a href="https://mochitarou49.github.io/" target="_blank" class="btn-primary">
+                    カメラを起動する (Web AR)
+                </a>
+                <a href="hungary.pdf" target="_blank" class="btn-secondary">
+                    PDFを見る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <section class="content-section">
+            <h2>プロジェクト概要</h2>
+            <p>
+                ハンガリーでのフィールドワークをもとに、現地の魅力を伝えるためのパンフレットを制作しました。<br>
+                単に情報を読むだけでなく、<strong>「スマホをかざすと現地の映像が流れる」</strong>というAR（拡張現実）技術を取り入れ、
+                紙媒体とデジタルコンテンツを融合させた新しい観光体験を提案しています。
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>AR（拡張現実）の仕組み</h2>
+            <div class="two-col">
+                <div class="col-text">
+                    <h3>スマホをかざすと動き出す</h3>
+                    <p>
+                        このパンフレットは、Webブラウザ上で動作するARシステムと連携しています。<br>
+                        <br>
+                        1. 専用のURLにアクセスしてカメラを起動<br>
+                        2. パンフレット内の写真を映す<br>
+                        3. <strong>写真が動き出し、現地の動画が再生される</strong>
+                    </p>
+                    <p>
+                        アプリのインストールは不要で、QRコードからすぐに体験できる手軽さを重視しました。
+                    </p>
+                </div>
+                <div class="col-img">
+                    <img src="hungary-ar.jpg" alt="ARの使い方">
+                    <p style="font-size:0.8rem; color:#666; text-align:center;">▲ 実際の操作説明ページ</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>デザインのこだわり</h2>
+            <div class="two-col" style="flex-direction: row-reverse;"> <div class="col-text">
+                    <h3>歴史と文化を感じるレイアウト</h3>
+                    <p>
+                        ハンガリーの伝統的な建築美や、ドナウ川の雄大さが伝わるよう、写真は大きく配置しました。<br>
+                        また、余白を活かしたデザインにすることで、歴史の重厚感と現代的なスタイリッシュさを両立させています。
+                    </p>
+                </div>
+                <div class="col-img">
+                    <img src="hungary-inner1.jpg" alt="パンフレット中面">
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <a href="index.html" class="back-link">← Topに戻る</a>
+
+    <footer>
+        <div style="text-align:center; padding:20px; color:#fff; background:#333;">
+            <p>&copy; 2025 Adachi Masatoshi</p>
+        </div>
+    </footer>
+
+</body>
+</html>
